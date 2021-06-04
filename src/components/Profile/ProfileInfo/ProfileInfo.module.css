@@ -1,0 +1,28 @@
+.wrapper{
+}
+
+
+.descriptionBlock {
+    padding: 10px;
+    margin-right: 10px;
+}
+
+
+
+.descriptionBlock img{
+    border-radius: 10px;
+}
+
+.status{
+    padding: 20px 10px;
+    background-color: #e8e08f;
+    box-shadow: 0 0 40px #938d34 inset;
+    border-radius: 10px;
+    border: 1px solid black;
+}
+
+.statusA {
+    padding: 5px;
+    border: 1px solid #a41b1b;
+    border-radius: 5px;
+}

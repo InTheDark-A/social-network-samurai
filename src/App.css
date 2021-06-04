@@ -1,0 +1,24 @@
+body {
+    /*background: #170120 url("./assets/images/back_body.jpg") no-repeat;*/
+    background-size: 100%;
+    font-family: "Times New Roman", Georgia, Serif;
+}
+
+.app-wrapper {
+    display: grid;
+    grid-template-areas:
+          "h h"
+          "n c";
+    grid-template-rows: 60px 1fr;
+    grid-template-columns: 1fr 10fr;
+    grid-gap: 10px;
+    font-weight: 200;
+}
+
+.app-wrapper-content {
+    grid-area: c;
+    background-color: #e3dcdc;
+    border-radius: 10px;
+    box-shadow: 0 0 30px #000000 inset;
+    padding: 20px 25px;
+}

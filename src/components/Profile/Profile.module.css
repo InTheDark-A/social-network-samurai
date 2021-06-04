@@ -1,0 +1,23 @@
+.wrapper{
+    grid-template-areas: "body background";
+}
+
+.body{
+    grid-area: body;
+    display: flex;
+}
+
+.background{
+    display: inline-block;
+}
+
+.background img{
+    border-radius: 10px;
+    box-shadow: 0 0 10px black;
+    width: 750px;
+}
+
+.body > div:not(:last-child){
+    display: inline-block;
+}
+

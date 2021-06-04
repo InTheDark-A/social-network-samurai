@@ -1,0 +1,25 @@
+.header {
+    margin: 0 0;
+    grid-area: h;
+    background: #171616 no-repeat 0 -900px;
+    box-shadow: 0 0 10px 5px #000000;
+    z-index: 1;
+}
+
+.header img:first-child {
+    width: 240px;
+    transform: translateY(-10px);
+}
+
+.header img {
+    width: 100px;
+    transform: translateY(-10px);
+}
+
+.loginBlock {
+    float: right;
+}
+
+.loginBlock a {
+    color: white;
+}
