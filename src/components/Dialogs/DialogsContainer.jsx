@@ -1,4 +1,3 @@
-// eslint-disable-next-line no-unused-vars
 import React from 'react';
 import { sendMessageCreator} from "../../redux/dialogs-reducer";
 import Dialogs from "./Dialogs";
@@ -14,10 +13,10 @@ let mapStateToProps = (state) => {
     };
 };
 
-const SuperDialogsContainer = compose(
+const DialogsContainer = compose(
     connect(mapStateToProps,
         {onSendMessageClick: sendMessageCreator})
     //, withAuthRedirectComponent
 )(Dialogs);
 
-export default SuperDialogsContainer;
+export default DialogsContainer;

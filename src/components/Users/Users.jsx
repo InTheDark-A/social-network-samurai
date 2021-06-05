@@ -3,10 +3,9 @@ import Paginator from "../Common/Paginator/Paginator";
 import User from "./User";
 
 let Users = ({currentPage, totalUsersCount, pageSize, onPageChanged,  ...props}) => {
-
     return (
         <div>
-            <Paginator currentPage={currentPage} totalUsersCount={totalUsersCount}
+            <Paginator currentPage={currentPage} totalItemsCount={totalUsersCount}
                        pageSize={pageSize} onPageChanged={onPageChanged}/>
             <div>
                 {
@@ -16,7 +15,7 @@ let Users = ({currentPage, totalUsersCount, pageSize, onPageChanged,  ...props})
                         :null
                 }
             </div>
-            <Paginator currentPage={currentPage} totalUsersCount={totalUsersCount}
+            <Paginator currentPage={currentPage} totalItemsCount={totalUsersCount}
                        pageSize={pageSize} onPageChanged={onPageChanged}/>
         </div>
     );

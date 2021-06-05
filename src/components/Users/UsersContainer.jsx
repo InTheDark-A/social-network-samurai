@@ -6,7 +6,7 @@ import {
     setCurrentPage, toogleIsFollowingProgress, unfollow,
 } from "../../redux/users-reducer";
 import Users from "./Users";
-import Preoloader from "../Common/Preloader/Preoloader";
+import Preloader from "../Common/Preloader/Preloader";
 import {withAuthRedirectComponent} from "../../hoc/WithAuthRedirect";
 import {compose} from "redux";
 import {
@@ -29,18 +29,20 @@ class UsersAPIComponent extends React.Component {
 
     render() {
         return <>
-            {this.props.isFetching ? <Preoloader/> : null}
-            <Users totalUsersCount={this.props.totalUsersCount}
-                   pageSize={this.props.pageSize}
-                   currentPage={this.props.currentPage}
-                   users={this.props.users}
-                   onPageChanged={this.onPageChanged}
-                   isFetching={this.props.isFetching}
-                   toogleIsFollowingProgress={this.props.toogleIsFollowingProgress}
-                   followingInProgress={this.props.followingInProgress}
-                   follow={this.props.follow}
-                   unfollow={this.props.unfollow}
-            />
+            {this.props.isFetching ? <Preloader/>
+                :
+                <Users totalUsersCount={this.props.totalUsersCount}
+                       pageSize={this.props.pageSize}
+                       currentPage={this.props.currentPage}
+                       users={this.props.users}
+                       onPageChanged={this.onPageChanged}
+                       isFetching={this.props.isFetching}
+                       toogleIsFollowingProgress={this.props.toogleIsFollowingProgress}
+                       followingInProgress={this.props.followingInProgress}
+                       follow={this.props.follow}
+                       unfollow={this.props.unfollow}
+                />}
+
         </>;
     }
 }

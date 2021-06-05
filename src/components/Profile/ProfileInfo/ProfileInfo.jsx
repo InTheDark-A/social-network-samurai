@@ -1,12 +1,12 @@
 import React from 'react';
 import s from './ProfileInfo.module.css';
-import Preoloader from "../../Common/Preloader/Preoloader";
+import Preloader from "../../Common/Preloader/Preloader";
 import ProfileStatus from "./ProfileStatus";
 
 
 const ProfileInfo = (props) => {
     if (!props.profile) {
-        return <Preoloader/>
+        return <Preloader/>
     }
 
     console.log(props);

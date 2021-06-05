@@ -4,6 +4,7 @@
     background: #171616 no-repeat 0 -900px;
     box-shadow: 0 0 10px 5px #000000;
     z-index: 1;
+    color: white;
 }
 
 .header img:first-child {

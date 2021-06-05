@@ -11,7 +11,7 @@ const TOGGLE_IS_FOLLOWING_PROGRESS = "TOGGLE-IS-FOLLOWING-PROGRESS";
 
 let initialState = {
     users: [],
-    pageSize: 5,
+    pageSize: 10,
     totalUsersCount: 0,
     currentPage: 1,
     isFetching: true,
@@ -97,6 +97,7 @@ const followUnFollowFlow = async (dispatch, userId, apiMethod, actionCreator) =>
 }
 
 export const follow = (userId) => {
+
     return async (dispatch) => {
         followUnFollowFlow(dispatch, userId, usersApi.follow.bind(usersApi), followAC);
     }

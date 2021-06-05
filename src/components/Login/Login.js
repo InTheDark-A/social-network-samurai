@@ -7,7 +7,7 @@ import {login, logout} from "../../redux/auth-reducer";
 import {Redirect} from "react-router-dom";
 import style from "./../Common/FormsControls/FormControls.module.css";
 
-const maxLength20 = maxLengthCreator(20);
+const maxLength20 = maxLengthCreator(30);
 
 const LoginForm = ({handleSubmit, error, onSubmit}) => {
     return (
