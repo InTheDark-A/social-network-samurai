@@ -15,7 +15,7 @@ const MyPosts = React.memo((props) => {
     };
 
     return <div className={s.postsBlock}>
-        My posts
+        Мои посты:
         <AddPostReduxForm onSumbit={onAddPost}/>
         <div className={s.posts}>
             {postsElements}

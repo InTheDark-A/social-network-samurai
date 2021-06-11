@@ -1,13 +1,15 @@
 import React from 'react';
 import s from './Post.module.css';
-
+import avatar from "./../../../../assets/images/profile.jpg"
 const Post = (props) => {
     return <div className={s.item}>
-        <img src={"https://yt3.ggpht.com/ytc/AAUvwnhAqEAF26--bgeyaisBjBaDBiTBW1BaUsuUOYFRQA=s900-c-k-c0x00ffffff-no-rj"}
-             alt={"avatar"}/>
-        {props.message}
+        <div className={s.inner}>
+            <img src={avatar}
+                 alt={"avatar"}/>
+            <p>{props.message}</p>
+        </div>
         <div>
-            <span>{props.likesCount} likes</span>
+            <span>Likes: {props.likesCount}</span>
         </div>
     </div>;
 };

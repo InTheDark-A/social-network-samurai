@@ -21,3 +21,17 @@
     display: inline-block;
 }
 
+.bodySec {
+    padding: 5px;
+    display: flex;
+}
+
+.bodySec > div{
+    width: 585px;
+}
+
+.bodySec img{
+    border-radius: 10px;
+    box-shadow: 0 0 10px black;
+}
+

@@ -37,6 +37,7 @@ class ProfileStatus extends React.Component {
             <div>
                 {!this.state.editMode &&
                 <div>
+                    <span className={"bold"}>Статус:{" "}</span>
                     <span className={s.statusA} onClick={this.activateEditMode.bind(this)}>{this.props.status || "------"}</span>
                 </div>
                 }
