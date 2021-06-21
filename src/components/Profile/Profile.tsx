@@ -1,11 +1,21 @@
-import React from 'react';
+import React, {FC} from 'react';
 import s from './Profile.module.css';
 import ProfileInfo from "./ProfileInfo/ProfileInfo";
 import PostsContainer from "./MyPosts/MyPostsContainer";
 import Background from "./../../assets/images/back_profile.jpg"
 import Relax from "./../../assets/gifs/relax.gif"
+import {ProfileType} from "../../types/types";
 
-const Profile = (props) => {
+type PropsType = {
+    profile: ProfileType
+    status: string
+    isOwner: boolean
+    savePhoto: (file:any) => void
+    saveProfile: () => void
+    updateStatus: (status: string) => void
+}
+
+const Profile:FC<PropsType> = (props) => {
     return <div className={s.wrapper}>
         <div className={s.body}>
             <ProfileInfo profile={props.profile} status={props.status} updateStatus={props.updateStatus} isOwner={props.isOwner}

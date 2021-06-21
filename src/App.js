@@ -34,7 +34,7 @@ class App extends Component {
                 <div className={"app-wrapper-content"}>
                     <Route exact path={"/dialogs"} render={withSuspenseComponent(DialogsContainer)}/>
                     <Route path={"/profile/:userId?"} render={withSuspenseComponent(ProfileContainer)}/>
-                    <Route path={"/users"} render={() => <UsersContainer/>}/>
+                    <Route path={"/users"} render={() => <UsersContainer pageTitle={"Самураи"}/>}/>
                     <Route path={"/Login"} render={withSuspenseComponent(Login)}/>
                 </div>
             </div>);

@@ -3,7 +3,6 @@ import s from './ProfileInfo.module.css';
 import Preloader from "../../Common/Preloader/Preloader";
 import ProfileStatus from "./ProfileStatus";
 import ProfileImg from "./../../../assets/images/profile.jpg"
-import ProfileDataForm from "./ProfileDataForm";
 import ProfileDataFormReduxForm from "./ProfileDataForm";
 
 const ProfileInfo = ({savePhoto,saveProfile, ...props}) => {
@@ -24,7 +23,7 @@ const ProfileInfo = ({savePhoto,saveProfile, ...props}) => {
             () => {
                 setEditMode(false);
             }
-        );;
+        );
     }
 
     return <div>
