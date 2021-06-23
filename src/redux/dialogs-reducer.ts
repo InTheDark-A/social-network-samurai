@@ -1,11 +1,11 @@
 import {InferActionsTypes} from "./redux-store";
 
-type DialogType = {
+export type DialogType = {
     id: number,
     name: string,
 };
 
-type MessageType = {
+export type MessageType = {
     id: number,
     message: string,
 }
@@ -25,7 +25,7 @@ let initialState = {
         {id: 4, message: "Терзаешь мою душу",},
         {id: 5, message: "Yo",},
         {id: 6, message: "Беды с башкой :(",}
-    ] as Array<MessageType>
+    ] as Array<MessageType>,
 }
 
 export type InitialStateType = typeof initialState;

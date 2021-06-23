@@ -79,4 +79,4 @@ export default compose(
         getUsers
     }),
     withAuthRedirectComponent
-)(UsersAPIComponent)
+)(UsersAPIComponent) as any; //React.ComponentType<WCP>

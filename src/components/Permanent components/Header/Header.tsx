@@ -3,7 +3,7 @@ import s from './Header.module.css';
 import logo from "../../../assets/images/logo_dark.jpg"
 import {NavLink} from "react-router-dom";
 
-const Header = (props) => {
+const Header:React.FC<{isAuth: boolean | null, login: string | null, logout: () => void}> = (props) => {
     return <header className={s.header}>
         <div>
             <img src={logo} alt={"logo"}/>
