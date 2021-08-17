@@ -1,7 +1,7 @@
-import {instance, ResponseType, ResultCodeForCaptcha, ResultCodesEnum} from "./api";
+import {instance, APIResponseType, ResultCodeForCaptcha, ResultCodesEnum} from "./api";
 
-type MeResponseType = ResponseType<{ id: number, email: string, login: string }>;
-type LoginResponseType = ResponseType<{ userId: number }, ResultCodeForCaptcha & ResultCodesEnum>;
+type MeResponseType = APIResponseType<{ id: number, email: string, login: string }>;
+type LoginResponseType = APIResponseType<{ userId: number }, ResultCodeForCaptcha & ResultCodesEnum>;
 type LogoutMeResponseType = MeResponseType;
 
 export const authApi = {

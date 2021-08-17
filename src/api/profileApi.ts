@@ -1,5 +1,5 @@
 import {ProfileType} from "../types/types";
-import {instance, ResponseType, ResultCodesEnum} from "./api";
+import {instance, APIResponseType} from "./api";
 
 type GetProfileResponseType = ProfileType;
 
@@ -13,12 +13,12 @@ export const profileApi = {
         return await instance.get<GetStatusResponseType>(`/profile/status/${id}`).then(res => res.data);
     },
     async updateStatus(status: string) {
-        return await instance.put<ResponseType>('/profile/status', {status: status}).then(res => res.data);
+        return await instance.put<APIResponseType>('/profile/status', {status: status}).then(res => res.data);
     },
     async savePhoto(photoFile: File) {
         let formData = new FormData();
         formData.append("image", photoFile);
-        return await instance.put<ResponseType<{ photos: { small: string, large: string } }>>('/profile/photo', formData, {
+        return await instance.put<APIResponseType<{ photos: { small: string, large: string } }>>('/profile/photo', formData, {
             headers: {
                 "Content-Type": "multipart/form-data"
             }
